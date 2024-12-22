@@ -28,6 +28,7 @@ android {
     compileSdk = flutter.compileSdkVersion
     ndkVersion = "26.3.11579264"
 
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
@@ -44,8 +45,12 @@ android {
         targetSdk = flutter.targetSdkVersion
         versionCode = flutterVersionCode.toInteger()
         versionName = flutterVersionName
+        multiDexEnabled true
     }
 
+    dependencies {
+        implementation 'com.android.support:multidex:1.0.3'
+    }
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.

@@ -42,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen>
         if (!mounted) {
           return;
         } else {
-          // AppNavigator.navigatorReplace(context, const CredentialsBase());
+          AppNavigator.navigatorReplace(context, const CredentialsBase());
         }
       },
     );

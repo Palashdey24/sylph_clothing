@@ -12,36 +12,20 @@ void main() {
 
   runApp(
     DevicePreview(
-      enabled: !kReleaseMode,
+      backgroundColor: Colors.white, // Professional, clean background
+      enabled: true, // Let the magic begin!
+      defaultDevice: Devices.ios.iPhone13ProMax, // Start with a bang
+      isToolbarVisible: true, // Give users control
+      availableLocales: const [Locale('en', 'US')],
       tools: const [
         DeviceSection(
-          model: true, // Let them switch devices
-          orientation: false, // Keep it simple
-          frameVisibility: false, // Clean presentation
-          virtualKeyboard: false, // Focus on the UI
+          model: true, // Option to change device model to fit your needs
+          orientation: false, // Lock to portrait for consistent demo
+          frameVisibility: false, // Hide frame options
+          virtualKeyboard: false, // Hide keyboard
         ),
       ],
-      devices: [
-        // ... Devices.all, // uncomment to see all devices
 
-        // Popular Android Devices
-        Devices.android.samsungGalaxyA50, // Mid-range
-        Devices.android.samsungGalaxyNote20, // Large screen
-        Devices.android.samsungGalaxyS20, // Flagship
-        Devices.android.samsungGalaxyNote20Ultra, // Premium
-        Devices.android.onePlus8Pro, // Different aspect ratio
-        Devices.android.sonyXperia1II, // Tall screen
-
-        // Popular iOS Devices
-        Devices.ios.iPhoneSE, // Small screen
-        Devices.ios.iPhone12, // Standard size
-        Devices.ios.iPhone12Mini, // Compact
-        Devices.ios.iPhone12ProMax, // Large
-        Devices.ios.iPhone13, // Latest standard
-        Devices.ios.iPhone13ProMax, // Latest large
-        Devices.ios.iPhone13Mini, // Latest compact
-        Devices.ios.iPhoneSE, // Budget option
-      ],
       builder: (context) => const MyApp(), // Wrap your app
     ),
   );
