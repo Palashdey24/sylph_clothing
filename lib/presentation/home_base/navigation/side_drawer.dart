@@ -116,9 +116,14 @@ class SideDrawer extends StatelessWidget {
                       ),
                     ),
                   const Gap(AppGap.mediumGap),
-                  const CircleAvatar(
-                    backgroundImage: AssetImage(AppAssets.appLogo),
-                    radius: 50,
+                  Card(
+                    clipBehavior: Clip.hardEdge,
+                    shape: CircleBorder(),
+                    child: Image.asset(
+                      AppAssets.appLogo,
+                      width: 100,
+                      height: 100,
+                    ),
                   ),
                   const Gap(AppGap.normalGap),
                   Text(

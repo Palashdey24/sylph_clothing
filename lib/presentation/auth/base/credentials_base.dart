@@ -1,10 +1,15 @@
+import 'dart:developer';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:sylph_clothing/presentation/auth/widgets/credentials_main_frame.dart';
+import 'package:sylph_clothing/presentation/config/theme/app_font.dart';
 import 'package:sylph_clothing/presentation/config/utility/string/app_string.dart';
 import 'package:sylph_clothing/presentation/core/clipers/card_triangle_quadratic_bezier_path.dart';
 import 'package:sylph_clothing/presentation/core/clipers/photo_bottom_quadratic_bezier_path.dart';
 import 'package:sylph_clothing/presentation/core/dimensions/phone_size.dart';
+import 'package:sylph_clothing/presentation/core/helper/dialog_loading/dialogs_loading.dart';
+import 'package:sylph_clothing/presentation/core/navigator/app_navigator.dart';
 
 class CredentialsBase extends StatefulWidget {
   const CredentialsBase({super.key});
@@ -55,6 +60,8 @@ class _CredentialsBaseState extends State<CredentialsBase>
 
   @override
   Widget build(BuildContext context) {
+    log(AppFont.bodyMedium(context).fontSize.toString());
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: ListView(

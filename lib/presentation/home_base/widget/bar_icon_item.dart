@@ -46,7 +46,7 @@ class BarIconItem extends StatelessWidget {
               Text(
                 barString,
                 style: AppFont.bodySmall(context)
-                    .copyWith(color: AppColor.kSecondColor),
+                    .copyWith(color: AppColor.kSecondColor, fontSize: 10),
               ),
               const Gap(5),
             ],

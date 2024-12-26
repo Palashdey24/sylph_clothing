@@ -151,9 +151,8 @@ class AddAddressPage extends StatelessWidget {
                                   child: ValueListenableBuilder(
                                       valueListenable: selectLabel,
                                       builder: (context, value, child) {
-                                        return Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
+                                        return Wrap(
+                                          alignment: WrapAlignment.center,
                                           children: [
                                             for (final label in addressLabel)
                                               GestureDetector(

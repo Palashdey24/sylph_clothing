@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:sylph_clothing/presentation/auth/base/credentials_base.dart';
 import 'package:sylph_clothing/presentation/config/assets/app_asset.dart';
 import 'package:sylph_clothing/presentation/config/theme/app_color.dart';
+import 'package:sylph_clothing/presentation/config/theme/app_font.dart';
 import 'package:sylph_clothing/presentation/core/clipers/splash_quadratic_bezier_path.dart';
 import 'package:sylph_clothing/presentation/core/dimensions/app_gap.dart';
 import 'package:sylph_clothing/presentation/core/dimensions/phone_size.dart';
@@ -58,6 +59,8 @@ class _SplashScreenState extends State<SplashScreen>
 
   @override
   Widget build(BuildContext context) {
+    final phoneWidth = PhoneSize.deviceWidth(context);
+    final phoneHeight = PhoneSize.deviceHeight(context);
     return Scaffold(
       body: SafeArea(
         child: Stack(
@@ -67,8 +70,8 @@ class _SplashScreenState extends State<SplashScreen>
               child: ClipPath(
                 clipper: SplashQuadraticBezierPath(),
                 child: Container(
-                  width: PhoneSize.deviceWidth(context) * 0.65,
-                  height: PhoneSize.deviceHeight(context) * 0.4,
+                  width: phoneWidth * (phoneWidth > 1000 ? 0.35 : 0.65),
+                  height: phoneHeight * 0.4,
                   decoration: const BoxDecoration(color: AppColor.kDarkColor),
                   padding: const EdgeInsets.only(
                       left: AppGap.normalGap, top: AppGap.largeGap * 1.5),

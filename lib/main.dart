@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sylph_clothing/presentation/auth/base/credentials_base.dart';
 import 'package:sylph_clothing/presentation/config/theme/app_theme.dart';
 import 'package:sylph_clothing/presentation/splash/splash_screen.dart';
 
@@ -46,6 +47,6 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.poppinsTextTheme(),
         ),
         home: /*const SafeArea(child: CredentialsBase())*/
-            const SplashScreen());
+            const CredentialsBase());
   }
 }

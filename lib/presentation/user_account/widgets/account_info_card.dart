@@ -20,14 +20,17 @@ class AccountInfoCard extends StatelessWidget {
           color: Colors.blueGrey,
           borderRadius: BorderRadius.vertical(bottom: Radius.circular(40))),
       child: Padding(
-        padding:
-            const EdgeInsets.only(top: AppGap.normalGap, left: 5, right: 5),
+        padding: EdgeInsets.only(
+            top: PhoneSize.deviceHeight(context) > 800 ? AppGap.largeGap : 5,
+            left: PhoneSize.deviceWidth(context) * 0.1,
+            right: PhoneSize.deviceWidth(context) * 0.1),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Flex(
                 direction: Axis.horizontal,
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Card(

@@ -52,7 +52,9 @@ class CategoryWiseSectionBase extends StatelessWidget {
                 crossAxisSpacing: setionIndex.isEven ? 15 : 5,
                 mainAxisSpacing: AppGap.normalGap,
                 crossAxisCount: setionIndex.isEven ? 2 : 3,
-                childAspectRatio: setionIndex.isEven ? 1 : 0.65,
+                childAspectRatio: setionIndex.isEven
+                    ? (phoneHeight > 1000 ? 1.65 : 1.1)
+                    : (phoneHeight > 1000 ? 1 : 0.65),
                 physics: const NeverScrollableScrollPhysics(),
                 children: [
                   if (setionIndex.isEven)
