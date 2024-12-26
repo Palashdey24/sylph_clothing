@@ -60,8 +60,6 @@ class _CredentialsBaseState extends State<CredentialsBase>
 
   @override
   Widget build(BuildContext context) {
-    log(AppFont.bodyMedium(context).fontSize.toString());
-
     return Scaffold(
       backgroundColor: Colors.white,
       body: ListView(
