@@ -3,7 +3,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gap/gap.dart';
 import 'package:sylph_clothing/domain/model/status_bar_model.dart';
 import 'package:sylph_clothing/presentation/core/dimensions/app_gap.dart';
+import 'package:sylph_clothing/presentation/core/navigator/app_navigator.dart';
 import 'package:sylph_clothing/presentation/core/widgets/custome/custome_top_bar_core.dart';
+import 'package:sylph_clothing/presentation/home_base/base/home_main_base_with_slider.dart';
 import 'package:sylph_clothing/presentation/order/widgets/order_item.dart';
 import 'package:sylph_clothing/presentation/order/widgets/order_status_bar_item.dart';
 
@@ -23,7 +25,9 @@ final orderStatusBar = [
 ];
 
 class OrdersPage extends StatelessWidget {
-  const OrdersPage({super.key});
+  const OrdersPage({super.key, this.isFromConfirm});
+
+  final bool? isFromConfirm;
 
   @override
   Widget build(BuildContext context) {
@@ -33,8 +37,14 @@ class OrdersPage extends StatelessWidget {
         child: Scaffold(
       body: Column(
         children: [
-          const CustomeTopBarCore(
+          CustomeTopBarCore(
             barTittle: "Order",
+            onBack: isFromConfirm == true
+                ? () {
+                    AppNavigator.navigatorReplace(
+                        context, const HomeMainBaseWithSlider());
+                  }
+                : null,
           ),
           const Gap(AppGap.normalGap),
 

@@ -6,7 +6,9 @@ import 'package:sylph_clothing/presentation/config/theme/app_color.dart';
 import 'package:sylph_clothing/presentation/config/theme/app_font.dart';
 import 'package:sylph_clothing/presentation/core/dimensions/app_gap.dart';
 import 'package:sylph_clothing/presentation/core/dimensions/phone_size.dart';
+import 'package:sylph_clothing/presentation/core/navigator/app_navigator.dart';
 import 'package:sylph_clothing/presentation/core/widgets/custome/custome_top_bar_core.dart';
+import 'package:sylph_clothing/presentation/order_confirmation/order_confirmation_page.dart';
 
 class CartsPage extends StatelessWidget {
   const CartsPage({super.key, this.barEnable, this.bottomCardMargin});
@@ -60,7 +62,10 @@ class CartsPage extends StatelessWidget {
                       flex: 1,
                       child: TextButton(
                         style: TextButton.styleFrom(),
-                        onPressed: () {},
+                        onPressed: () => AppNavigator.navigatorReplace(
+                          context,
+                          const OrderConfirmationPage(),
+                        ),
                         child: Text(
                           "| Next >",
                           textAlign: TextAlign.left,

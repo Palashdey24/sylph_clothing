@@ -6,7 +6,9 @@ import 'package:sylph_clothing/presentation/config/theme/app_font.dart';
 import 'package:sylph_clothing/presentation/core/dimensions/app_gap.dart';
 import 'package:sylph_clothing/presentation/core/dimensions/phone_size.dart';
 import 'package:sylph_clothing/presentation/core/helper/dialog_loading/dialogs_loading.dart';
+import 'package:sylph_clothing/presentation/core/navigator/app_navigator.dart';
 import 'package:sylph_clothing/presentation/core/widgets/custome/custom_plus_minus_item_core.dart';
+import 'package:sylph_clothing/presentation/order_confirmation/order_confirmation_page.dart';
 
 class CartItem extends StatelessWidget {
   const CartItem({super.key, this.isBucket});

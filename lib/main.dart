@@ -7,7 +7,7 @@ import 'package:sylph_clothing/presentation/auth/base/credentials_base.dart';
 import 'package:sylph_clothing/presentation/auth/widgets/credentials_main_frame.dart';
 import 'package:sylph_clothing/presentation/config/theme/app_theme.dart';
 import 'package:sylph_clothing/presentation/home/home_page.dart';
-import 'package:sylph_clothing/presentation/home_base/base/home_slider_base.dart';
+import 'package:sylph_clothing/presentation/home_base/base/home_main_base_with_slider.dart';
 import 'package:sylph_clothing/presentation/splash/splash_screen.dart';
 
 void main() {

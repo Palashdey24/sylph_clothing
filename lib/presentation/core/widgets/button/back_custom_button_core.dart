@@ -3,14 +3,17 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sylph_clothing/presentation/config/theme/app_color.dart';
 
 class BackCustomButtonCore extends StatelessWidget {
-  const BackCustomButtonCore({super.key, this.circleRadius});
+  const BackCustomButtonCore({super.key, this.circleRadius, this.onBack});
 
   final double? circleRadius;
-
+  final void Function()? onBack;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.pop(context),
+      onTap: onBack ??
+          () {
+            Navigator.pop(context);
+          },
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: CircleAvatar(

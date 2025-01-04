@@ -8,16 +8,16 @@ import 'package:sylph_clothing/presentation/home_base/base/home_body_base.dart';
 import 'package:sylph_clothing/presentation/home_base/navigation/side_drawer.dart';
 import 'package:sylph_clothing/presentation/home_base/widget/top_bar_widgets.dart';
 
-class HomeSliderBase extends StatefulWidget {
-  const HomeSliderBase({
+class HomeMainBaseWithSlider extends StatefulWidget {
+  const HomeMainBaseWithSlider({
     super.key,
   });
 
   @override
-  State<HomeSliderBase> createState() => _HomeSliderBaseState();
+  State<HomeMainBaseWithSlider> createState() => _HomeMainBaseWithSliderState();
 }
 
-class _HomeSliderBaseState extends State<HomeSliderBase>
+class _HomeMainBaseWithSliderState extends State<HomeMainBaseWithSlider>
     with SingleTickerProviderStateMixin {
   bool slideOpen = false;
   static const int kDurationMiSec = 500;

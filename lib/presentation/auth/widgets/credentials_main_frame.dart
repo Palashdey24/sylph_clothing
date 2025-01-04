@@ -4,7 +4,7 @@ import 'package:sylph_clothing/presentation/auth/pages/sign_up_screen_page.dart'
 import 'package:sylph_clothing/presentation/auth/widgets/credentials_bottom_widgets.dart';
 import 'package:sylph_clothing/presentation/core/helper/dialog_loading/dialogs_loading.dart';
 import 'package:sylph_clothing/presentation/core/navigator/app_navigator.dart';
-import 'package:sylph_clothing/presentation/home_base/base/home_slider_base.dart';
+import 'package:sylph_clothing/presentation/home_base/base/home_main_base_with_slider.dart';
 
 class CredentialsMainFrame extends StatelessWidget {
   const CredentialsMainFrame({super.key});
@@ -32,7 +32,7 @@ class CredentialsMainFrame extends StatelessWidget {
                 onGuestFn: () {
                   DialogsLoadingCore.showProgressBar(context);
                   AppNavigator.navigatorReplace(
-                      context, const HomeSliderBase());
+                      context, const HomeMainBaseWithSlider());
                 })
           ],
         );

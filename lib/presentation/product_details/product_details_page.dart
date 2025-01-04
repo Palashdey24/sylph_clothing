@@ -22,9 +22,6 @@ class ProductDetailsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final phoneWidth = PhoneSize.deviceWidth(context);
-    final phoneHeight = PhoneSize.deviceHeight(context);
-
     String selectSize = 'N/A';
     bool haveSize = true;
 
